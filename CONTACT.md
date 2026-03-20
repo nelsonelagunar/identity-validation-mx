@@ -8,7 +8,7 @@ Azure DevOps Engineer | Kubernetes | Microservices
 
 - **LinkedIn:** [linkedin.com/in/nelsonelagunar](https://linkedin.com/in/nelsonelagunar)
 - **GitHub:** [github.com/nelsonelagunar](https://github.com/nelsonelagunar)
-- **Email:** contacto@nelsonlaguna.dev
+- **Email:** nlaguna@mykeepper.com
 - **Location:** Monterrey, México / Remote
 
 ---

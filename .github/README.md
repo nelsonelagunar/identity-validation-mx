@@ -36,7 +36,7 @@ If you're interested in:
 
 For legitimate business purposes (clients, employers, partnerships), source code can be shared under NDA.
 
-Contact: **contacto@nelsonlaguna.dev**
+Contact: **nlaguna@mykeepper.com**
 
 ---
 

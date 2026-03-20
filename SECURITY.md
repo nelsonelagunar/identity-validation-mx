@@ -4,7 +4,7 @@
 
 If you discover a security vulnerability, please report it privately:
 
-- **Email:** contacto@nelsonlaguna.dev
+- **Email:** nlaguna@mykeepper.com
 - **LinkedIn:** linkedin.com/in/nelsonelagunar
 
 **Do NOT create a public issue for security vulnerabilities.**

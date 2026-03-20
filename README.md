@@ -180,7 +180,7 @@ Azure DevOps Engineer | Kubernetes Specialist | Microservices Architect
 
 - **LinkedIn:** [linkedin.com/in/nelsonelagunar](https://linkedin.com/in/nelsonelagunar)
 - **GitHub:** [github.com/nelsonelagunar](https://github.com/nelsonelagunar)
-- **Email:** contacto@nelsonlaguna.dev
+- **Email:** nlaguna@mykeepper.com
 
 ---
 
