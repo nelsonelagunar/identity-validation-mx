@@ -22,28 +22,15 @@ SOFTWARE.
 
 ---
 
-## DISCLAIMER
+## ADDITIONAL TERMS
 
-⚠️ **IMPORTANT - READ CAREFULLY**
+**Source Code Availability:**
 
-This project is a **DEMONSTRATION** and uses **SIMULATED DATA**. 
+This repository contains API documentation and specifications only. 
 
-**DO NOT USE IN PRODUCTION** without integrating real government APIs:
+The actual source code implementation is **NOT** included in this repository and is proprietary.
 
-- **CURP**: Must integrate with RENAPO (https://www.gob.mx/segob/renapo)
-- **RFC**: Must integrate with SAT (https://www.sat.gob.mx)
-- **INE/IFE**: Must integrate with INE (https://www.ine.mx)
-- **Biometrics**: Must integrate with certified providers (Idemia, Onfido, etc.)
+For implementation inquiries, licensing, or collaboration opportunities, please contact:
 
-**The author is NOT responsible for:**
-- Use of this code in production environments
-- Legal implications of handling personal data
-- Integration with unauthorized services
-- Any damages arising from the use of this software
-
-**For production use, you MUST:**
-1. Obtain proper government authorizations
-2. Integrate official APIs
-3. Comply with Mexican data protection laws (LFPDPPP)
-4. Implement proper security measures
-5. Use certified providers for biometrics
+- **Email:** contacto@nelsonlaguna.dev
+- **LinkedIn:** linkedin.com/in/nelsonelagunar
