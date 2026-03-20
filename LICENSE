@@ -1,0 +1,49 @@
+MIT License
+
+Copyright (c) 2026 Nelson Laguna
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## DISCLAIMER
+
+⚠️ **IMPORTANT - READ CAREFULLY**
+
+This project is a **DEMONSTRATION** and uses **SIMULATED DATA**. 
+
+**DO NOT USE IN PRODUCTION** without integrating real government APIs:
+
+- **CURP**: Must integrate with RENAPO (https://www.gob.mx/segob/renapo)
+- **RFC**: Must integrate with SAT (https://www.sat.gob.mx)
+- **INE/IFE**: Must integrate with INE (https://www.ine.mx)
+- **Biometrics**: Must integrate with certified providers (Idemia, Onfido, etc.)
+
+**The author is NOT responsible for:**
+- Use of this code in production environments
+- Legal implications of handling personal data
+- Integration with unauthorized services
+- Any damages arising from the use of this software
+
+**For production use, you MUST:**
+1. Obtain proper government authorizations
+2. Integrate official APIs
+3. Comply with Mexican data protection laws (LFPDPPP)
+4. Implement proper security measures
+5. Use certified providers for biometrics
