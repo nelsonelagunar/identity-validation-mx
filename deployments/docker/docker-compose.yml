@@ -1,0 +1,88 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ../..
+      dockerfile: deployments/docker/Dockerfile
+    image: identity-validation-mx:latest
+    container_name: identity-validation-mx-api
+    ports:
+      - "8080:8080"
+    environment:
+      - APP_ENV=development
+      - APP_PORT=8080
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_USER=identity_user
+      - DB_PASSWORD=identity_pass
+      - DB_NAME=identity_db
+      - DB_SSLMODE=disable
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=
+      - REDIS_DB=0
+      - RATE_LIMIT_REQUESTS=100
+      - RATE_LIMIT_WINDOW=60s
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - identity-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: identity-validation-mx-postgres
+    environment:
+      - POSTGRES_USER=identity_user
+      - POSTGRES_PASSWORD=identity_pass
+      - POSTGRES_DB=identity_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql:ro
+    networks:
+      - identity-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U identity_user -d identity_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: identity-validation-mx-redis
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - identity-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres-data:
+    driver: local
+  redis-data:
+    driver: local
+
+networks:
+  identity-network:
+    driver: bridge

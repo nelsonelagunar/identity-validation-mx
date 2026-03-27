@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package identity;
+
+option go_package = "github.com/nelsonelagunar/identity-validation-mx/api/proto";
+
+service IdentityService {
+  rpc ValidateCURP(ValidateRequest) returns (ValidateResponse);
+  rpc ValidateRFC(ValidateRequest) returns (ValidateResponse);
+}
+
+message ValidateRequest {
+  string value = 1;
+}
+
+message ValidateResponse {
+  bool valid = 1;
+  string message = 2;
+}
